@@ -20,7 +20,7 @@ A modern, responsive, and visually stunning landing page template built with **N
 
 ## 🖥 Demo
 
-**[View Live Demo →](https://ai-startup-landing-page.vercel.app/)**
+**[View Live Demo →]([https://ai-startup-landing-page.vercel.app/](https://ai-startup-landing-page-rho.vercel.app/))**
 
 ## 📋 Sections Included
 
