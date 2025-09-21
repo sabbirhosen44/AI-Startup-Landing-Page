@@ -6,8 +6,18 @@ import quantumLogo from "@/assets/logo-quantum.png";
 import pulseLogo from "@/assets/logo-pulse.png";
 import echoLogo from "@/assets/logo-echo.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const LogoTicker = () => {
+  const logos = [
+    { src: acmeLogo, alt: "Acme logo" },
+    { src: apexLogo, alt: "Apex logo" },
+    { src: celestialLogo, alt: "Celestial logo" },
+    { src: quantumLogo, alt: "Quantum logo" },
+    { src: pulseLogo, alt: "Pulse logo" },
+    { src: echoLogo, alt: "Echo logo" },
+  ];
+
   return (
     <section className="py-20 md:py-24">
       <div className="container">
@@ -24,23 +34,15 @@ export const LogoTicker = () => {
                 duration: 30,
                 ease: "linear",
               }}
-              className="flex  flex-none gap-14 pr-14  -translate-x-1/2"
+              className="flex flex-none gap-14 pr-14 -translate-x-1/2"
             >
-              {[
-                acmeLogo,
-                apexLogo,
-                celestialLogo,
-                quantumLogo,
-                pulseLogo,
-                echoLogo,
-                acmeLogo,
-                apexLogo,
-                celestialLogo,
-                quantumLogo,
-                pulseLogo,
-                echoLogo,
-              ].map((logo) => (
-                <img src={logo.src} key={logo.src} className="h-6 w-auto" />
+              {[...logos, ...logos].map((logo, index) => (
+                <Image
+                  key={index}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-6 w-auto"
+                />
               ))}
             </motion.div>
           </div>
